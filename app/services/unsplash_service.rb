@@ -3,12 +3,14 @@ class UnsplashService
   base_uri "https://api.unsplash.com"
 
   def initialize
-    @headers = {
-      "Authorization" => "Client-ID #{Rails.application.credentials.unsplash[:access_key]}"
-    }
+    @access_key = Rails.application.credentials.unsplash[:access_key]
   end
 
-  def fetch_photos(query, per_page = 10)
-    self.class.get("/search/photos", headers: @headers, query: { query: query, per_page: per_page })
+  def fetch_photos(query)
+    self.class.get("/search/photos", query: { query: query, client_id: @access_key, per_page: 12 })
+  end
+
+  def fetch_user_photos(username)
+    self.class.get("/users/#{username}/photos", query: { client_id: @access_key, per_page: 12 })
   end
 end
