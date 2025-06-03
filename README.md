@@ -1,24 +1,28 @@
-# README
+Unsplash API Photo Feed App (Ruby on Rails)
+This is a Ruby on Rails web application that integrates with the Unsplash API to provide a dynamic photo feed based on user search queries. The app allows users to search for high-quality, royalty-free images from Unsplash, displaying photo thumbnails along with photographer attribution and links.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Key Features:
+Search Photos: Users can enter keywords to search for photos using the Unsplash API.
 
-Things you may want to cover:
+Dynamic Photo Feed: Results are displayed as a responsive gallery with clickable photographer profiles.
 
-* Ruby version
+Error Handling: Provides user-friendly error messages for API failures or invalid queries.
 
-* System dependencies
+Secure API Key Management: Utilizes Rails encrypted credentials to store Unsplash API keys securely.
 
-* Configuration
+Clean and Maintainable Code: Implements MVC architecture with clear separation of concerns.
 
-* Database creation
+Logging: Includes detailed logging for debugging API responses and application flow.
 
-* Database initialization
+Technologies & Tools:
+Ruby on Rails 7.x
 
-* How to run the test suite
+Unsplash REST API
 
-* Services (job queues, cache servers, search engines, etc.)
+HTTParty gem for HTTP requests
 
-* Deployment instructions
+Rails credentials for secure environment management
 
-* ...
+ERB templating for views
+
+Bootstrap / Flexbox for responsive layout (optional)
